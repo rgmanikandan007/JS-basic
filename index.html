@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #all{
+            height: 100vh;
+        }
+        button{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="all">
+        <button id="red">Red</button>
+        <button id="blue">Blue</button>
+        <button id="yellow">Yellow</button>
+    </div>
+
+    <script>
+        const red = document.getElementById("red");
+        const blue = document.getElementById("blue");
+        const yellow = document.getElementById("yellow");
+        const all = document.getElementById("all");
+
+        red.addEventListener("click", function(){
+            all.style.backgroundColor = "red"
+        })
+        blue.addEventListener("click", function(){
+            all.style.backgroundColor = "blue"
+        })
+        yellow.addEventListener("click", function(){
+            all.style.backgroundColor = "yellow"
+        })
+    </script>
+</body>
+</html>

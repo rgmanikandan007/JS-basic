@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        button{
+            cursor: pointer;
+        }
+        .cart {
+            margin-top: 1.3rem;
+            margin-left: 2rem;
+            cursor: pointer;
+        }
+        img{
+            width: 100px;
+        }
+        .products{
+            display: flex;
+        }
+        .item{
+            border: solid 1px #c0c0c0;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h2>PRODUCT PAGE</h2>
+        </div>
+        <div class="cart">
+            🛒 <span id="cartCount">0</span>
+        </div>
+    </div>
+
+    <div class="products">
+        <div class="item" id="item1">
+            <img src="img1.png" alt="img1">
+            <h3>Notes</h3>
+            <p>Lorem ipsum dolor sit amet</p>
+            <button id="notesBtn">Add cart</button>
+        </div>
+        <div class="item" id="item2">
+            <img src="img2.png" alt="img1">
+            <h3>Coconut</h3>
+            <p>Lorem ipsum dolor sit amet</p>
+            <button>Add cart</button>
+        </div>
+    </div>
+
+    <div id="display"></div>
+
+
+    <script>
+        const emptyArr = [];
+        const notesBtn = document.getElementById("notesBtn");
+
+        notesBtn.addEventListener("click", function(){
+            const item1 = document.getElementById("item1");
+            emptyArr.push(item1);
+
+            const cartCount = document.getElementById("cartCount");
+            const display = document.getElementById("display");
+
+        })
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+

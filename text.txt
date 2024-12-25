@@ -1,0 +1,52 @@
+<div class="container">
+    <div>
+        <h2>PRODUCT PAGE</h2>
+    </div>
+    <div class="cart">
+        🛒 <span id="cartCount">0</span>
+    </div>
+</div>
+
+<div class="products">
+    <div class="item" id="item1">
+        <img src="img1.png" alt="img1">
+        <h3>Notes</h3>
+        <p>Lorem ipsum dolor sit amet</p>
+        <button id="notesBtn">Add to Cart</button>
+    </div>
+    <div class="item" id="item2">
+        <img src="img2.png" alt="img2">
+        <h3>Coconut</h3>
+        <p>Lorem ipsum dolor sit amet</p>
+        <button id="coconutBtn">Add to Cart</button>
+    </div>
+</div>
+
+<div id="display"></div>
+
+<script>
+    const cart = [];
+    const cartCount = document.getElementById("cartCount");
+    const display = document.getElementById("display");
+
+    // Add to Cart Function
+    function addToCart(itemName) {
+        // Add the item to the cart array
+        cart.push(itemName);
+
+        // Update the cart count
+        cartCount.textContent = cart.length;
+
+        // Update the display area
+        display.innerHTML = `<h4>Items in Cart:</h4><ul>${cart.map(item => `<li>${item}</li>`).join("")}</ul>`;
+    }
+
+    // Event Listeners for Buttons
+    document.getElementById("notesBtn").addEventListener("click", function () {
+        addToCart("Notes");
+    });
+
+    document.getElementById("coconutBtn").addEventListener("click", function () {
+        addToCart("Coconut");
+    });
+</script>
